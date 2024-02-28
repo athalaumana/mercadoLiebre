@@ -1,0 +1,19 @@
+header {
+    background-color: #EAC926;
+    font-family: "roboto";
+}
+
+h1 {
+    font-family: "roboto";
+}
+
+article {
+    margin : 10px;
+    border: 1px solid black;
+    border-radius: 2%;
+    display: inline-block;
+    width: 50%;
+}
+article img {
+    width: 100%;
+}

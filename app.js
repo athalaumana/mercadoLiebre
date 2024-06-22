@@ -20,6 +20,10 @@ app.use(express.static(path.resolve(__dirname, "./public")));   // Dejar la carp
 // Ruta raiz / --> Home
 app.get("/", (req, res) => res.sendFile(path.resolve("./views/home.html")));
 
+app.get('/registro', (req, res) => res.sendFile(path.resolve('./views/registro.html')));
+
+app.get('/login', (req, res) => res.sendFile(path.resolve('./views/login.html')));
+
 // Ruta 404 ¿?  -->  "*" significa que a todo lo demás que no esté ruteado envía un 404
 app.get("*", (req, res) => res.status(404).send("404 not found. <br> ¡Houston, tenemos un problema!"));
 

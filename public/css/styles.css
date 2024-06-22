@@ -1,19 +1,448 @@
+
+:root{
+    --amarillo: #eac926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
 header {
     background-color: #EAC926;
-    font-family: "roboto";
 }
 
-h1 {
-    font-family: "roboto";
+.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
 }
 
-article {
-    margin : 10px;
-    border: 1px solid black;
-    border-radius: 2%;
-    display: inline-block;
+.logo {
     width: 50%;
+    display: flex;
+    justify-content: center;
 }
-article img {
+
+.logo img {
+    width: 90%;
+    display: block;
+}
+
+.barra-busqueda {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-busqueda input {
+    width: 80%;
+    height: 25px;
+    text-align: center;
+}
+
+.barra-busqueda i {
+    background-color: white;
+    margin-left: -15px;
+}
+
+.nav-frase {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: rgb(0,0,0,0.8);
+}
+   
+.burger-menu {
+    background-color: #1259c3;
+    width: 25px;
+    text-align: center;
+    border-radius: 15%;
+    padding: 4px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.burger-menu i {
+    color: white;
+}
+
+.banner {
+    background-color: var(--Gris-claro);
+}
+
+.banner img {
     width: 100%;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+
+main {
+    text-align: center;
+    width: 90vw;
+    margin: auto;
+}
+
+.titulo-principal h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.titulares-productos {
+    width: 100%;
+}
+
+.productos h2 {
+    margin-bottom: 20px;
+}
+
+.articulo-producto {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+.productos img {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.elementos-producto {
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+    display: block;
+    width: 100%;
+}
+
+.elementos-producto .precio-desc .precio {
+    width: 30%;
+}
+
+.elementos-producto .precio-desc .descuentos {
+    width: 70%;
+}
+
+
+.elementos-producto .precio-desc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.camion {
+    display: block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    
+}
+
+.camion:hover i {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.camion i {
+    font-size: 16px;
+    color: #39b54a;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.productos h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.productos .precio {
+    font-size: 18px;
+}
+
+.productos .descuentos {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+.productos .descripciones {
+    font-size: 16px;
+    display: none;
+    width: 100%;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.font-sixteen {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ebebeb;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+footer h3 {
+    color: #666;
+}
+
+footer p {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+footer i {
+    color: #03264C;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+
+@media (min-width: 361px) {
+
+    .top-header {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    section .logo {
+        width: 40%;
+    }
+    
+    section .barra-busqueda {
+        width: 30%;
+        justify-content: center;
+    }
+
+    section .barra-busqueda input {
+        width: 100%;
+    }
+
+    section .nav-frase {
+        width: 30%;
+    }
+
+    section .nav-frase h3 {
+        font-size: 9px;
+    }
+
+    .nav-bar {
+        display: flex;
+        width: 100%;
+        padding: 20px 0px;
+        justify-content: center;
+    }
+
+    .nav-list-1{
+        width: 49%;
+    }
+
+    .nav-list-1 li{
+        text-align: right;
+        display: inline-block;
+        flex-direction: row;
+    }
+
+    .nav-list-1 li a {
+        font-size: 8.4px;
+    }
+
+    .nav-list-2{
+        width: 49%;
+    }
+
+    .nav-list-2 li{
+        text-align: right;
+        display: inline-block;
+        flex-direction: row;
+    }
+
+    .nav-list-2 li a {
+        font-size: 8px;
+    }
+
+    .nav-list-2 li i {
+     padding-left: 1px;
+     padding-right: 1px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .productos article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .productos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 20px;
+    }
+
+
+    .articulo-producto {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(50% - 10px);
+    }
+
+    .productos .precio {
+        font-size: 11px;
+    }
+
+    .productos .descuentos {
+        font-size: 12px;
+        text-align: end;
+    }
+
+    .productos .descripciones {
+        display: block;
+    }
+
+}
+
+
+
+@media (min-width: 769px) {
+
+
+    .nav-frase {
+        justify-content: center;
+        padding: 5px;
+        text-align: right;
+    }
+    
+    section .nav-frase i {
+        font-size: 16px;
+    }
+
+    section .nav-frase h3 {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+
+    .nav-list-1 {
+        text-align: center;
+    }
+
+    .nav-list-1 li a {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    .nav-list-2 {
+        text-align: center;
+    }
+
+    .nav-list-2 li a {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    .nav-list-2 a i {
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .titulo-principal {
+        margin-top: 30px;
+    }
+
+    .productos {
+        gap: 0;
+    }
+
+    .productos h2 {
+        margin-top: 30px;
+    }
+
+    .articulo-producto {
+        width: 25%;
+    }
+
+    .productos .precio {
+        font-size: 14px;
+    }
+
+    .productos .descuentos {
+        font-size: 15px;
+    }
+
+    .productos .descripciones {
+        display: none;
+    }
+
+    .elementos-producto {
+        box-shadow: none;
+        transition: all 1s;
+    }
+
+    .elementos-producto:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .elementos-producto:hover .descripciones{
+        display: initial;
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    footer h3{
+        font-size: 16px;
+    }
+
+    footer p{
+        font-size: 16px;
+    }
+
 }
